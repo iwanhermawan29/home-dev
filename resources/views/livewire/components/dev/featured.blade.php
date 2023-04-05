@@ -23,7 +23,7 @@
                                                 <div class="homes-tag button alt featured">Featured</div>
                                                 <div class="homes-tag button alt sale">For Sale</div>
                                                 <img src="{{ asset('storage/'. $home->detail->image_plan) }}" alt="home-1"
-                                                    class="img-responsive">
+                                                    class="img-responsive" >
                                             </a>
                                         </div>
                                         <div class="button-effect">

@@ -6,7 +6,7 @@
             <div class="swiper-slide">
               
                 <a href="{{ asset('storage/'.$image->image) }}" class="grid image-link">
-                    <img src="{{ asset('storage/'.$image->image) }}" class="img-fluid" alt="#">
+                    <img src="{{ asset('storage/'.$image->image) }}" class="img-fluid" alt="#" style="width:1000px;Height:750px;">
                 </a>
                
             </div>
@@ -154,7 +154,7 @@
                     </div>
                     <div class="floor-plan property wprt-image-video w50 pro">
                         <h5>Floor Plans</h5>
-                        <img alt="image" src="{{ asset('storage/'.$detailProperties->detail->image_plan) }}">
+                        <img alt="image" src="{{ asset('storage/'.$detailProperties->detail->image_plan) }}" style="width:770px;Height:483px;">
                     </div>
                     <div class="floor-plan property wprt-image-video w50 pro">
                         <h5>What's Nearby</h5>

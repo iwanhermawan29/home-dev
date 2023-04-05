@@ -15,6 +15,9 @@
                     <li><a href="/dashboard/provinces">Provinces</a></li>
                     <li><a href="/dashboard/cities">Cities</a></li>
                     <li><a href="/dashboard/admins">Admins</a></li>
+                    <li><a href="/dashboard/aboutus">About Us</a></li>
+                    <li><a href="/dashboard/contactus">Contact Us</a></li>
+                    <li><a href="/dashboard/banners">Banners</a></li>
                 </ul>
             </li>
 

@@ -1,5 +1,7 @@
 <?php
 
+
+use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\DetailPropertyController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SearchController;
@@ -15,7 +17,12 @@ use App\Http\Controllers\DashboardNearbysController;
 use App\Http\Controllers\DashboardGallerysController;
 use App\Http\Controllers\DashboardDetailController;
 use App\Http\Controllers\DashboardAdminController;
+use App\Http\Controllers\DashboardAboutUsController;
+use App\Http\Controllers\DashboardContactUsController;
+use App\Http\Controllers\DashboardBannersController;
 use App\Models\AdminsProperty;
+use App\Models\Banner;
+
 
 use Illuminate\Support\Facades\Route;
 
@@ -36,15 +43,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
+    $banner = Banner::all();
     $sales = AdminsProperty::all();
 
     $randomSales = $sales->random();
 
 
-    return view('index',  compact('randomSales'));
+    return view('index',  compact('randomSales', 'banner'));
 })->name('landing');
 
-
+Route::get('/aboutus', [AboutUsController::class, 'index'])->name('aboutus');
 // Route::get('/propertyDetail/{slug}', [DetailPropertyController::class, 'index'])->name('propertyDetail');
 Route::get('detail/{slug}', [DetailPropertyController::class, 'index'])->name('propertyDetail');
 
@@ -77,6 +85,9 @@ Route::resource('/dashboard/nearbys', DashboardNearbysController::class)->middle
 Route::resource('/dashboard/gallerys', DashboardGallerysController::class)->middleware('auth');
 Route::resource('/dashboard/details', DashboardDetailController::class)->middleware('auth');
 Route::resource('/dashboard/admins', DashboardAdminController::class)->middleware('auth');
+Route::resource('/dashboard/aboutus', DashboardAboutUsController::class)->middleware('auth');
+Route::resource('/dashboard/contactus', DashboardContactUsController::class)->middleware('auth');
+Route::resource('/dashboard/banners', DashboardBannersController::class)->middleware('auth');
 
 
 // Route::get('/dashboard', function () {

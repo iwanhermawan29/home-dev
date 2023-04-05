@@ -82,7 +82,7 @@
                 
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <button type="submit" class="btn btn-primary">Create Cities</button>
+                        <button type="submit" class="btn btn-primary">Create Gallerys</button>
                     </div>
                 </div>
             </form>
